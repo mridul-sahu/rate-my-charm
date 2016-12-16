@@ -1,3 +1,25 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
+<%= form_for( @user , html: { multipart: true }) do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <p class="title"><%= yield(:title)%></p>
+
+    <%= f.text_field :name, placeholder: 'Name' %>
+
+    <%= f.submit "Post", class: "btn btn-primary" %>
+
+    <span class="picture">
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+    </span>
+
+<% end %>
+
+<script type="text/javascript">
+  $('#user_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
