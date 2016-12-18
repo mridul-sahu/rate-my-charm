@@ -1,9 +1,15 @@
 class User < ApplicationRecord
-  before_save { self.name = name.upcase }
+  before_save :set_up
   mount_uploader :picture, PictureUploader
   validates :name,  presence: true, length: { maximum: 50 }
   validates :picture, presence: true
+  validates :gender, presence: true
   validate  :picture_size
+
+  def set_up
+    self.rating ||= 1500
+    self.name = name.upcase
+  end
 
   private
 
