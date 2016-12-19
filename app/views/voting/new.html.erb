@@ -1,4 +1,5 @@
 <h1 class="d3">LEFT OR RIGHT</h1>
+<% session[:id_check] = @users[0].id * @users[1].id %>
 <div style="height: 510px;">
 <%= link_to image_tag(@users[0].picture.url, alt: @users[0].name, class: "img-responsive display", size: 500) , {:controller => :voting, :action => :vote_for, :id_voted => @users[0].id, :id_not_voted => @users[1].id }%>
 
