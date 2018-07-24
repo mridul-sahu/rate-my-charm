@@ -1,24 +1,7 @@
-# README
+# Rate My Charm
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Application built for Rate My Charm Contest held at NIT Meghalaya.
 
-Things you may want to cover:
+It is based on the idea of **Facemash** as shown on the Movie **The Social Network**
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Note: This repository is very old and I do not intend to keep it upto date**
